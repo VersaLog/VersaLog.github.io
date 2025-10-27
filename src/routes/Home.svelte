@@ -6,10 +6,9 @@
     { name: "GitHub", url: "https://github.com/VersaLog", icon: "github" },
     { name: "X", url: "https://x.com/VersaLog", icon: "twitter" },
     { name: "Qiita", url: "https://qiita.com/tags/VersaLog", icon: "code" },
-    { name: "Support", url: "https://discord.gg/yourserver", icon: "message-circle" }
+    { name: "Support", url: "https://discord.gg/Et2GNZUb", icon: "message-circle" }
   ];
 
-  // SVGアイコン関数
   function getIcon(name) {
     const icons = {
       github: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.3 7.9 10.8.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.6-1.5-1.3-1.9-1.3-1.9-1.1-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.7-1.8-2.6-.3-5.4-1.3-5.4-6 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a10.9 10.9 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.7-2.8 5.7-5.4 6 .4.3.8 1 .8 2v3c0 .3.2.7.8.6A10.99 10.99 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>`,
@@ -25,7 +24,6 @@
   <CodeBackground />
   <HeroSection />
 
-  <!-- フッター -->
   <footer class="z-10 absolute bottom-4 flex space-x-6 text-gray-400">
     {#each footerLinks as link}
       <a
