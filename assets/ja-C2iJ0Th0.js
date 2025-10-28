@@ -1,0 +1,1 @@
+const c="ホーム",o="ドキュメント",t="開発者について",e="VersaLog",s="次世代のロギング",n={heading:"開発メンバー",text:"VersaLogはオープンソースを愛する開発者によって作られています。",roles:{owner:"オーナー兼開発者",contributor:"貢献者"}},a={home:"ホーム",docs:o,about_menu:t,title:e,subtitle:s,about:n};export{n as about,t as about_menu,a as default,o as docs,c as home,s as subtitle,e as title};
