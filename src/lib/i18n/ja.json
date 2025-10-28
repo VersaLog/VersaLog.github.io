@@ -1,0 +1,16 @@
+{
+  "home": "ホーム",
+  "docs": "ドキュメント",
+  "about_label": "アバウト",
+  "title": "VersaLog",
+  "subtitle": "次世代のログシステム",
+  
+  "about": {
+    "heading": "開発者について",
+    "text": "VersaLogはオープンソースを愛する開発者によって作られています。",
+    "roles": {
+      "owner": "オーナー兼開発者",
+      "contributor": "コントリビューター"
+    }
+  }
+}

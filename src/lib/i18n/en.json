@@ -1,0 +1,15 @@
+{
+  "home": "Home",
+  "docs": "Docs",
+  "about_label": "About",
+  "title": "VersaLog",
+  "subtitle": "Next Generation Logging",
+  "about": {
+    "heading": "Our Developers",
+    "text": "VersaLog is created by developers who love open source.",
+    "roles": {
+      "owner": "Owner & Developer",
+      "contributor": "Contributor"
+    }
+  }
+}
