@@ -6,9 +6,9 @@
   const t = _;
 
   const developers = [
-    { name: "kaedeek", roleKey: "about.roles.owner", avatar: "/assets/avatars/free.png" },
-    { name: "yomi4486", roleKey: "about.roles.contributor", avatar: "/assets/avatars/free.png" },
-    { name: "kaminuma", roleKey: "about.roles.contributor", avatar: "/assets/avatars/free.png" }
+    { name: "kaedeek", roleKey: "about.roles.owner", avatar: "src/assets/avatars/free.png" },
+    { name: "yomi4486", roleKey: "about.roles.contributor", avatar: "src/assets/avatars/yomi4486.jpeg" },
+    { name: "kaminuma", roleKey: "about.roles.contributor", avatar: "src/assets/avatars/free.png" }
   ];
 
   function changeLanguage(lang) {
