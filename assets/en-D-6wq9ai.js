@@ -1,1 +1,0 @@
-const e="Home",o="Docs",t="About",s="VersaLog",n="Next Generation Logging",r={heading:"Our Developers",text:"VersaLog is created by developers who love open source.",roles:{owner:"Owner & Developer",contributor:"Contributor"}},c={home:e,docs:o,about_label:t,title:s,subtitle:n,about:r};export{r as about,t as about_label,c as default,o as docs,e as home,n as subtitle,s as title};

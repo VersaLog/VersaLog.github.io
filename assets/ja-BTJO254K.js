@@ -1,1 +1,0 @@
-const a="ホーム",o="ドキュメント",t="アバウト",e="VersaLog",s="次世代のログシステム",n={heading:"開発者について",text:"VersaLogはオープンソースを愛する開発者によって作られています。",roles:{owner:"オーナー兼開発者",contributor:"コントリビューター"}},c={home:"ホーム",docs:o,about_label:t,title:e,subtitle:s,about:n};export{n as about,t as about_label,c as default,o as docs,a as home,s as subtitle,e as title};
