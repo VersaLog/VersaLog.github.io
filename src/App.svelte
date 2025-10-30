@@ -3,6 +3,13 @@
   import Home from './routes/Home.svelte';
   import Docs from './routes/Docs.svelte';
   import About from './routes/About.svelte';
+
+  import Python from './routes/docs/Python.svelte';
+  import JavaScript from './routes/docs/JavaScript.svelte';
+  import Rust from './routes/docs/Rust.svelte';
+  import Go from './routes/docs/Go.svelte';
+  import Ruby from './routes/docs/Ruby.svelte';
+  
   import { _, locale } from 'svelte-i18n';
   import { setLang, loadI18n } from './lib/i18n.js';
 
@@ -10,6 +17,11 @@
   const routes = {
     '/': Home,
     '/docs': Docs,
+    '/docs/python': Python,
+    '/docs/javascript': JavaScript,
+    '/docs/rust': Rust,
+    '/docs/go': Go,
+    '/docs/ruby': Ruby,
     '/about': About,
   };
 

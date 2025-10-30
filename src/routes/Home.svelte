@@ -4,8 +4,8 @@
 
   const footerLinks = [
     { name: "GitHub", url: "https://github.com/VersaLog", icon: "github" },
-    { name: "X", url: "https://x.com/VersaLog", icon: "twitter" },
-    { name: "Qiita", url: "https://qiita.com/tags/VersaLog", icon: "code" },
+    { name: "X", url: "https://x.com/logversa81950", icon: "twitter" },
+    { name: "Qiita", url: "https://qiita.com/organizations/versatile", icon: "code" },
     { name: "Support", url: "https://discord.gg/Et2GNZUb", icon: "message-circle" }
   ];
 
