@@ -11,7 +11,7 @@
   </p>
 
   <div class="bg-gray-900 p-6 rounded-xl shadow-lg w-full max-w-3xl mb-8">
-    <h2 class="text-2xl font-semibold mb-2">🧩 {$t('docs.example')}</h2>
+    <h2 class="text-2xl font-semibold mb-2">🧩 {$t('doc.example')}</h2>
     <pre class="bg-gray-800 text-green-300 p-4 rounded-lg overflow-x-auto text-sm">
 <code>import Versalog from "versalog";
 
