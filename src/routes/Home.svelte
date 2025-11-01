@@ -20,17 +20,18 @@
   }
 </script>
 
+
 <div class="relative min-h-screen flex flex-col items-center justify-center text-center text-white bg-black overflow-hidden">
   <CodeBackground />
   <HeroSection />
 
-  <footer class="z-10 absolute bottom-4 flex space-x-6 text-gray-400">
+  <footer class="z-10 absolute bottom-6 flex space-x-10 text-gray-400">
     {#each footerLinks as link}
       <a
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-white transition-colors duration-200"
+        class="hover:text-white hover:scale-110 transition-all duration-200"
         title={link.name}
       >
         {@html getIcon(link.icon)}
