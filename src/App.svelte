@@ -9,7 +9,7 @@
   import Rust from './routes/docs/Rust.svelte';
   import Go from './routes/docs/Go.svelte';
   import Ruby from './routes/docs/Ruby.svelte';
-  
+
   import { _, locale } from 'svelte-i18n';
   import { setLang, loadI18n } from './lib/i18n.js';
 
@@ -25,12 +25,13 @@
     '/about': About,
   };
 
-  const langs = ['en', 'ja'];
-  let ready = false;
+  const langs = [
+    { code: 'ja', label: '日本語', flag: '🇯🇵' },
+    { code: 'en', label: 'English', flag: '🇺🇸' },
+  ];
 
-  loadI18n().then(() => {
-    ready = true;
-  });
+  let ready = false;
+  loadI18n().then(() => (ready = true));
 
   function handleChange(event) {
     setLang(event.target.value);
@@ -38,76 +39,41 @@
 </script>
 
 {#if ready}
-  <nav>
-    <a href="#/" class="card">{$t('home')}</a>
-    <a href="#/docs" class="card">{$t('docs')}</a>
-    <a href="#/about" class="card">{$t('about_label')}</a>
+  <nav class="flex flex-wrap justify-center items-center gap-3 md:gap-6 p-4 md:p-6 backdrop-blur-md bg-black/40 border-b border-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+    
+    <a href="#/" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500 text-2xl font-extrabold drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:scale-105 transition-transform">
+      VersaLog
+    </a>
 
-    <select on:change={handleChange} class="lang-select">
-      {#each langs as lang}
-        <option value={lang} selected={$locale === lang}>
-          {lang === 'ja' ? '日本語' : 'English'}
-        </option>
-      {/each}
-    </select>
+    <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+      <a href="#/" class="px-4 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition-all text-white font-semibold shadow-lg hover:scale-105">
+        {$t('home')}
+      </a>
+      <a href="#/docs" class="px-4 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition-all text-white font-semibold shadow-lg hover:scale-105">
+        {$t('docs')}
+      </a>
+      <a href="#/about" class="px-4 py-2 rounded-2xl bg-white/10 hover:bg-white/20 transition-all text-white font-semibold shadow-lg hover:scale-105">
+        {$t('about_label')}
+      </a>
+    </div>
+
+    <div class="ml-auto md:ml-6">
+      <select
+        on:change={handleChange}
+        class="bg-white/10 text-white border border-white/20 rounded-xl px-3 py-2 focus:outline-none hover:bg-white/20 transition-all"
+      >
+        {#each langs as lang}
+          <option value={lang.code} selected={$locale === lang.code}>
+            {lang.flag} {lang.label}
+          </option>
+        {/each}
+      </select>
+    </div>
   </nav>
 
-  <main>
+  <main class="text-white text-center px-4 py-6 md:py-10">
     <Router {routes} />
   </main>
 {:else}
-  <div class="loading">Loading translations...</div>
+  <div class="text-white text-2xl text-center mt-20 animate-pulse">Loading...</div>
 {/if}
-
-<style>
-  body {
-    margin: 0;
-    background: black;
-    font-family: sans-serif;
-  }
-
-  nav {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    align-items: center;
-  }
-
-  .card {
-    display: block;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: transform 0.2s, background 0.2s;
-  }
-
-  .card:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-4px);
-  }
-
-  main {
-    color: white;
-    padding: 2rem;
-  }
-
-  .lang-select {
-    margin-left: auto;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-  }
-
-  .loading {
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 3rem;
-  }
-</style>
