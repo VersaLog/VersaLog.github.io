@@ -1,30 +1,44 @@
 <script>
-  let currentLang = 'ja';
-  const languages = [
-    { code: 'ja', label: '🇯🇵 日本語' },
-    { code: 'en', label: '🇺🇸 English' },
-    { code: 'zh', label: '🇨🇳 中文' },
-    { code: 'fr', label: '🇫🇷 Français' },
-  ];
+  import { locale } from "../lib/i18n.js";
 
-  function changeLang(e) {
-    currentLang = e.target.value;
-  }
+  let open = false;
+
+  const changeLanguage = (lang) => {
+    locale.set(lang);
+    open = false;
+  };
 </script>
 
-<select bind:value={currentLang} on:change={changeLang} class="lang-select">
-  {#each languages as lang}
-    <option value={lang.code}>{lang.label}</option>
-  {/each}
-</select>
+<div class="relative inline-block text-left">
+  <button
+    class="flex items-center justify-center w-10 h-10 rounded-full hover:scale-110 transition-transform"
+    on:click={() => (open = !open)}
+  >
+    {#if $locale === 'en'}
+      <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-6 h-6 rounded-full" />
+    {:else}
+      <img src="https://flagcdn.com/w20/jp.png" alt="日本語" class="w-6 h-6 rounded-full" />
+    {/if}
+  </button>
 
-<style>
-  .lang-select {
-    background: #111;
-    color: white;
-    border-radius: 1rem;
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-    border: none;
-  }
-</style>
+  {#if open}
+    <div
+      class="absolute right-0 mt-2 w-32 bg-gray-900 border border-gray-700 rounded-xl shadow-lg py-2 z-50"
+    >
+      <button
+        on:click={() => changeLanguage('en')}
+        class="flex items-center px-4 py-2 w-full text-left hover:bg-gray-800"
+      >
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 mr-2" />
+        English
+      </button>
+      <button
+        on:click={() => changeLanguage('ja')}
+        class="flex items-center px-4 py-2 w-full text-left hover:bg-gray-800"
+      >
+        <img src="https://flagcdn.com/w20/jp.png" alt="日本語" class="w-5 h-5 mr-2" />
+        日本語
+      </button>
+    </div>
+  {/if}
+</div>
