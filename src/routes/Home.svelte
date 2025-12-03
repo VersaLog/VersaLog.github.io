@@ -10,7 +10,7 @@
     { name: "GitHub", url: "https://github.com/VersaLog", icon: "github" },
     { name: "X", url: "https://x.com/logversa81950", icon: "twitter" },
     { name: "Qiita", url: "https://qiita.com/organizations/versatile", icon: "code" },
-    { name: "Support", url: "https://discord.gg/C96PHR87", icon: "message-circle" }
+    { name: "Support", url: "https://discord.gg/HsEfRGqR", icon: "message-circle" }
   ];
 
   function getIcon(name) {
