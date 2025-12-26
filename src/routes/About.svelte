@@ -14,16 +14,22 @@
     },
     {
       name: "yomi4486",
-      roleKey: "about.roles.contributor",
+      roleKey: "about.roles.member",
       avatar: "https://github.com/yomi4486.png",
       url: "https://github.com/yomi4486",
     },
     {
       name: "kaminuma",
-      roleKey: "about.roles.contributor",
+      roleKey: "about.roles.member",
       avatar: "https://github.com/kaminuma.png",
       url: "https://github.com/kaminuma",
     },
+    {
+      name: "xlebovoz",
+      roleKey: "about.roles.contributor",
+      avatar: "https://github.com/xlebovoz.png",
+      url: "https://github.com/xlebovoz",
+    }
   ];
 
   function changeLanguage(lang) {

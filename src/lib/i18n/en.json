@@ -10,6 +10,7 @@
     "text": "VersaLog is created by developers who love open source.",
     "roles": {
       "owner": "Owner & Developer",
+      "member": "Member",
       "contributor": "Contributor"
     }
   },
