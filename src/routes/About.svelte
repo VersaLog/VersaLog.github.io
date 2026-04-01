@@ -25,6 +25,12 @@
       url: "https://github.com/kaminuma",
     },
     {
+      name: "r1tar",
+      roleKey: "about.roles.contributor",
+      avatar: "https://github.com/r1tar.png",
+      url: "https://github.com/r1tar",
+    },
+    {
       name: "xlebovoz",
       roleKey: "about.roles.contributor",
       avatar: "https://github.com/xlebovoz.png",
