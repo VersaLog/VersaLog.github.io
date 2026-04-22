@@ -5,7 +5,7 @@
 
   const t = _;
 
-  const developers = [
+  const members = [
     {
       name: "kaedeek",
       roleKey: "about.roles.owner",
@@ -23,12 +23,21 @@
       roleKey: "about.roles.member",
       avatar: "https://github.com/kaminuma.png",
       url: "https://github.com/kaminuma",
-    },
+    }
+  ];
+
+  const contributors = [
     {
       name: "r1tar",
       roleKey: "about.roles.contributor",
       avatar: "https://github.com/r1tar.png",
       url: "https://github.com/r1tar",
+    },
+    {
+      name: "komoike-oss28-ui",
+      roleKey: "about.roles.contributor",
+      avatar: "https://github.com/komoike-oss28-ui.png",
+      url: "https://github.com/komoike-oss28-ui",
     },
     {
       name: "xlebovoz",
@@ -58,9 +67,12 @@
     </p>
   </div>
 
-  <!-- 開発者一覧 -->
-  <div class="z-10 mt-16 w-full max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    {#each developers as dev}
+  <h3 class="z-10 mt-16 text-2xl font-bold text-cyan-300">
+    👥 {$t('about.members')}
+  </h3>
+
+  <div class="z-10 mt-6 w-full max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {#each members as dev}
       <a
         href={dev.url}
         target="_blank"
@@ -72,12 +84,39 @@
           alt={dev.name}
           class="w-24 h-24 rounded-full mb-4 border-2 border-cyan-400 shadow-[0_0_10px_#00ffff80] group-hover:shadow-[0_0_20px_#00ffff]"
         />
-        <h2
-          class="text-xl font-semibold mb-1 text-cyan-300 group-hover:text-cyan-400 transition-colors"
-        >
+        <h2 class="text-xl font-semibold mb-1 text-cyan-300 group-hover:text-cyan-400 transition-colors">
           {dev.name}
         </h2>
-        <p class="text-gray-300 text-center">{$t(dev.roleKey)}</p>
+        <p class="text-gray-300 text-center">
+          {$t(dev.roleKey)}
+        </p>
+      </a>
+    {/each}
+  </div>
+
+  <h3 class="z-10 mt-16 text-2xl font-bold text-purple-300">
+    💡 {$t('about.contributors')}
+  </h3>
+
+  <div class="z-10 mt-6 mb-20 w-full max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {#each contributors as dev}
+      <a
+        href={dev.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 rounded-2xl p-6 flex flex-col items-center hover:scale-105 hover:border-purple-400 hover:shadow-[0_0_20px_#a855f760] transition-all duration-300 group"
+      >
+        <img
+          src={dev.avatar}
+          alt={dev.name}
+          class="w-24 h-24 rounded-full mb-4 border-2 border-purple-400 shadow-[0_0_10px_#a855f780] group-hover:shadow-[0_0_20px_#a855f7]"
+        />
+        <h2 class="text-xl font-semibold mb-1 text-purple-300 group-hover:text-purple-400 transition-colors">
+          {dev.name}
+        </h2>
+        <p class="text-gray-300 text-center">
+          {$t(dev.roleKey)}
+        </p>
       </a>
     {/each}
   </div>
