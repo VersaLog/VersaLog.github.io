@@ -68,7 +68,7 @@
   </div>
 
   <h3 class="z-10 mt-16 text-2xl font-bold text-cyan-300">
-    👥 {$t('about.member')}
+    👥 {$t('about.roles.member')}
   </h3>
 
   <div class="z-10 mt-6 w-full max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -95,7 +95,7 @@
   </div>
 
   <h3 class="z-10 mt-16 text-2xl font-bold text-purple-300">
-    💡 {$t('about.contributor')}
+    💡 {$t('about.roles.contributor')}
   </h3>
 
   <div class="z-10 mt-6 mb-20 w-full max-w-6xl px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
