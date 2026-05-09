@@ -13,12 +13,6 @@
       url: "https://github.com/kaedeek",
     },
     {
-      name: "yomi4486",
-      roleKey: "about.roles.member",
-      avatar: "https://github.com/yomi4486.png",
-      url: "https://github.com/yomi4486",
-    },
-    {
       name: "kaminuma",
       roleKey: "about.roles.member",
       avatar: "https://github.com/kaminuma.png",
@@ -27,6 +21,12 @@
   ];
 
   const contributors = [
+    {
+      name: "yomi4486",
+      roleKey: "about.roles.contributor",
+      avatar: "https://github.com/yomi4486.png",
+      url: "https://github.com/yomi4486",
+    },
     {
       name: "r1tar",
       roleKey: "about.roles.contributor",
